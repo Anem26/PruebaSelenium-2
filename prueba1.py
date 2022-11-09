@@ -7,10 +7,13 @@ driver.maximize_window()
 driver.delete_all_cookies()
 driver.get("https://www.amazon.com/")
 
-buscar = driver.find_element(By.ID, 'twotabsearchtextbox')
+
+#PARTE 1 (ANGIE ELLIS)
+driver.find_element(By.ID, 'twotabsearchtextbox').send_keys("laptop hp pavilion")
 driver.find_element(By.ID, "nav-search-submit-button").click()
 driver.find_element(By.CLASS_NAME, "s-image").click()
 
+#PARTE 2 (DEREK STANZIOLA)
 driver.find_element(By.ID, 'a-autoid-0-announce').click()
 driver.find_element(By.ID, 'quantity_3').click()
 driver.find_element(By.ID, "add-to-cart-button").click()
